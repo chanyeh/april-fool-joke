@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愚人节惊喜！你的电脑被猫病毒入侵了！</title>
+    <style>
+        body {
+            background: #f0f0f0 url('https://picsum.photos/200/300?random') repeat;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            border: 5px dashed #FFD700;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        .big-text {
+            font-size: 3em;
+            color: #FF4500;
+            text-shadow: 2px 2px #FFD700;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 30px 0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .cat-image {
+            animation: float 2s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="big-text">恭喜你！</h1>
+        <img src="https://i.imgur.com/8ZzFgQz.jpg" alt="震惊表情包" class="cat-image" style="width: 300px; border: 5px solid #FFD700; margin: 30px auto;">
+        
+        <div class="warning">
+            你的电脑已被成功"猫病毒"感染！
+            <br>
+            点击按钮可查看感染详情（别担心，这只是愚人节玩笑）
+        </div>
+
+        <button onclick="showPopup()">点击查看感染报告</button>
+
+        <script>
+            function showPopup() {
+                // 弹窗内容
+                alert("检测到您的系统中存在以下猫病毒：\n\n- 猫爪键盘症候群（键盘被猫霸占）\n- 奶油盘占有欲（所有零食必须分享）\n- 沙发布轰炸机病毒（沙发已成猫窝）\n\n建议立即执行以下操作：\n1. 给猫咪买零食\n2. 说'好孩子'\n3. 永远别关电脑（因为猫需要你）");
+                
+                // 添加搞笑音效（已替换有效链接）
+                const audio = new Audio('https://freesound.org/data/previews/539/539112_7142447-lq.mp3'); // 猫咪叫声
+                audio.play();
+                
+                // 随机变色背景
+                document.body.style.backgroundColor = "#FFFFFF";
+                const colorChange = setInterval(() => {
+                    document.body.style.backgroundColor = 
+                        Math.random() > 0.5 ? "#FF4500" : "#FFFFFF";
+                }, 500);
+                
+                // 3秒后停止变色
+                setTimeout(() => {
+                    clearInterval(colorChange);
+                    document.body.style.backgroundColor = "#f0f0f0";
+                }, 3000);
+            }
+        </script>
+    </div>
+</body>
+</html>
